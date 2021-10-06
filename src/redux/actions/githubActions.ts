@@ -1,5 +1,5 @@
 import { GithubTypes } from '../constants/GithubTypes';
-import {GithubUsersJSONTypes} from '../constants/githubUsersJSONTypes'
+import { GithubUsersJSONTypes } from '../constants/githubUsersJSONTypes';
 
 interface SearchUsersAction {
   type: GithubTypes.SEARCH_USERS;
@@ -7,7 +7,7 @@ interface SearchUsersAction {
 
 interface SearchUsersSuccessAction {
   type: GithubTypes.SEARCH_USERS_SUCCESS;
-  payload: GithubUsersJSONTypes[];
+  payload: GithubUsersJSONTypes;
 }
 
 interface SearchUsersErrorAction {

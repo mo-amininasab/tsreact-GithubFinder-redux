@@ -1,17 +1,21 @@
 import { GithubTypes } from '../constants/GithubTypes';
 import { GithubAction } from '../actions/githubActions';
-import { GithubUsersJSONTypes } from '../constants/githubUsersJSONTypes'
+import { GithubUsersJSONTypes } from '../constants/githubUsersJSONTypes';
 
 interface GithubState {
   loading: boolean;
   error: string | null;
-  data: GithubUsersJSONTypes[];
+  data: GithubUsersJSONTypes;
 }
 
 const initialState: GithubState = {
   loading: false,
   error: null,
-  data: [],
+  data: {
+    incomplete_results: false,
+    total_count: 0,
+    items: [],
+  },
 };
 const githubReducer = (
   state = initialState,
@@ -25,7 +29,7 @@ const githubReducer = (
       return { ...state, loading: false, error: null, data: action.payload };
 
     case GithubTypes.SEARCH_USERS_ERROR:
-      return { ...state, loading: false, error: action.payload }
+      return { ...state, loading: false, error: action.payload };
 
     default:
       return state;
