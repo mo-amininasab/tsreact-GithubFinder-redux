@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  width: 80vw;
+  padding: 6px;
+  margin: 12px auto;
+  margin-top: 12px;
+}

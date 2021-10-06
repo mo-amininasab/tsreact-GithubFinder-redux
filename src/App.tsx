@@ -3,6 +3,7 @@ import React from 'react'
 // cmp
 import Navbar from './components/layout/Navbar'
 import Search from './components/users/Search'
+import Users from './components/users/Users'
 
 // style
 import './App.scss'
@@ -16,6 +17,7 @@ const App: React.FC<Props> = () => {
     <div>
       <Navbar />
       <Search />
+      <Users />
     </div>
   )
 }
