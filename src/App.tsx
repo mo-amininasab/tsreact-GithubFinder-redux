@@ -20,7 +20,8 @@ const App: React.FC<Props> = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/about" exact component={About} />
+        <Route path="/user/:login" exact />
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -7,7 +7,6 @@
   align-items: center;
   width: 80vw;
   padding: 6px;
-  background-color: green;
   margin: 12px auto;
   margin-top: 12px;
 
@@ -21,6 +20,12 @@
       font-size: 16px;
       height: 36px;
       padding: 6px;
+      border: solid black 1px;
+      border-radius: 6px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     button {
@@ -29,6 +34,11 @@
       font-size: 16px;
       margin-top: 16px;
       height: 36px;
+      border-radius: 6px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -37,5 +47,10 @@
     font-size: 16px;
     height: 36px;
     width: 95%;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
