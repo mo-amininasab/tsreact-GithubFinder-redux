@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 6px;
+  background-color: green;
+  margin: 12px auto;
+  margin-top: 12px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 95%;
+
+    input {
+      font-size: 16px;
+      height: 36px;
+      padding: 6px;
+    }
+
+    button {
+      background: $dark-color;
+      color: $white-color;
+      font-size: 16px;
+      margin-top: 16px;
+      height: 36px;
+    }
+  }
+
+  .btn-clear {
+    background: rgb(230, 213, 213);
+    font-size: 16px;
+    height: 36px;
+    width: 95%;
+  }
+}
