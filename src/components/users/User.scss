@@ -1,0 +1,48 @@
+@import '../../variables';
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  
+  
+  &-light {
+    background: #ccc;
+    color: $dark-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.text-success {
+  color: green;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.user-card {
+  display: flex;
+  border: $text-color solid 1px;
+  padding: 12px 32px;
+
+  .all-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+}
+
+.img-round {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}

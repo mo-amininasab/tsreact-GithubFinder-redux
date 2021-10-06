@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { userActionCreators } from '../../redux';
 
+// redux
+import './User.scss';
+
 interface MatchParams {
   login: string;
 }
@@ -25,19 +28,21 @@ const User: React.FC<Props> = ({ match }) => {
   }, []);
 
   return (
-    <Fragment>
-      <Link to="/" className="btn btn-light">
-        Back To Search
-      </Link>
-      Hireable:{' '}
-      {data?.hireable ? (
-        <i className="fas fa-check text-success" />
-      ) : (
-        <i className="fas fa-times-circle text-danger" />
-      )}
-      <div className="">
+    <div className="container">
+      <div className="mb-24">
+        <Link to="/" className="btn btn-light mr-8">
+          Back To Search
+        </Link>
+        Hireable:{' '}
+        {data?.hireable ? (
+          <i className="fas fa-check text-success" />
+        ) : (
+          <i className="fas fa-times-circle text-danger" />
+        )}
+      </div>
+      <div className="user-card">
         <div className="all-center">
-          <img src={data?.avatar_url} alt="" />
+          <img src={data?.avatar_url} alt="" className="img-round"/>
           <h1>{data?.name}</h1>
           <p>Location: {data?.location}</p>
         </div>
@@ -87,7 +92,7 @@ const User: React.FC<Props> = ({ match }) => {
         </div>
       </div>
       {/* <Repos repos={repos} /> */}
-    </Fragment>
+    </div>
   );
 };
 
