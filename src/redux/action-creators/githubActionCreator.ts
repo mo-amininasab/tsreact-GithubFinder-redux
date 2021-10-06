@@ -18,3 +18,7 @@ export const searchUsers =
       dispatch({ type: GithubTypes.SEARCH_USERS_ERROR, payload: error });
     }
   };
+
+export const clearUsers = () => ({
+  type: GithubTypes.CLEAR_USERS,
+});

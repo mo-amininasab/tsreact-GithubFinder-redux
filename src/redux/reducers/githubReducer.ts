@@ -31,6 +31,12 @@ const githubReducer = (
     case GithubTypes.SEARCH_USERS_ERROR:
       return { ...state, loading: false, error: action.payload };
 
+    case GithubTypes.CLEAR_USERS:
+      return {
+        ...state,
+        data: { items: [], incomplete_results: false, total_count: 0 },
+      };
+
     default:
       return state;
   }

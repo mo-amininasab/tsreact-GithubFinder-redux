@@ -15,7 +15,12 @@ interface SearchUsersErrorAction {
   payload: string;
 }
 
+interface ClearUsersAction {
+  type: GithubTypes.CLEAR_USERS;
+}
+
 export type GithubAction =
   | SearchUsersAction
   | SearchUsersSuccessAction
-  | SearchUsersErrorAction;
+  | SearchUsersErrorAction
+  | ClearUsersAction;
