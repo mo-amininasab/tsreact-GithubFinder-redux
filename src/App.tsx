@@ -1,25 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Route, Switch } from 'react-router';
 
 // cmp
-import Navbar from './components/layout/Navbar'
-import Search from './components/users/Search'
-import Users from './components/users/Users'
+import Navbar from './components/layout/Navbar';
+
+// page
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import NotFound from './components/pages/NotFound';
 
 // style
-import './App.scss'
+import './App.scss';
 
-interface Props {
-  
-}
+interface Props {}
 
 const App: React.FC<Props> = () => {
   return (
     <div>
       <Navbar />
-      <Search />
-      <Users />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
