@@ -1,10 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-function App() {
-  return (
-    <div >
-    </div>
-  );
+// cmp
+import Navbar from './components/layout/Navbar'
+
+// style
+import './App.scss'
+
+interface Props {
+  
 }
 
-export default App;
+const App: React.FC<Props> = () => {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  )
+}
+
+export default App
