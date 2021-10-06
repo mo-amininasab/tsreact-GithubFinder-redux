@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router';
 
 // cmp
 import Navbar from './components/layout/Navbar';
+import User from './components/users/User';
 
 // page
 import Home from './components/pages/Home';
@@ -21,7 +22,7 @@ const App: React.FC<Props> = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
-        <Route path="/user/:login" exact />
+        <Route path="/user/:login" exact component={User}/>
         <Route component={NotFound} />
       </Switch>
     </div>

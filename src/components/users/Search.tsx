@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // redux
-import { actionCreators } from '../../redux/index';
+import { githubActionCreators } from '../../redux/index';
 import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 
@@ -23,11 +23,11 @@ const Search: React.FC<Props> = (props) => {
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    dispatch(actionCreators.searchUsers(term));
+    dispatch(githubActionCreators.searchUsers(term));
   };
 
   const onClearHandler = () => {
-    dispatch(actionCreators.clearUsers());
+    dispatch(githubActionCreators.clearUsers());
     setTerm('');
   };
 

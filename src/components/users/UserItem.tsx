@@ -17,7 +17,7 @@ const UserItem: React.FC<Props> = ({ user: { login, avatar_url } }) => {
       <img src={avatar_url} alt="Avatar" />
       <h3>{login}</h3>
       <div>
-        <Link to={`/users/${login}`} className="link">
+        <Link to={`/user/${login}`} className="link">
           More
         </Link>
       </div>
